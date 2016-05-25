@@ -13,7 +13,10 @@
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:showIn="@layout/home"
     tools:context="mabroid.prof_folio.Home">
-
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/datalayout">
     <TextView
         android:gravity="center"
         android:textColor="@color/textColor"
@@ -40,7 +43,127 @@
         android:divider="#FFFFFF"
         android:layout_below="@+id/textView2"
         android:layout_centerHorizontal="true" />
+</RelativeLayout>
 
+    <ScrollView
+        android:id="@+id/registerlayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/datalayout">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/image"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <ImageButton
+            android:focusable="true"
+            android:layout_gravity="center"
+            android:layout_width="200dp"
+            android:layout_height="150dp"
+            android:layout_marginBottom="10dp"
+            android:padding="10dp"
+            android:background="@color/colorAccent"
+            android:id="@+id/photo"
+            android:src="@mipmap/camera"
+            android:layout_weight="0" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_marginTop="15dp"
+        android:id="@+id/name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/image">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:id="@+id/batchYear"
+            android:text="YEAR"
+            android:textColor="@color/textColor"
+            android:textStyle="bold"
+            android:textSize="25sp"
+            android:editable="false"
+            android:focusable="false"
+            android:layout_weight="1" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/firstname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/name"
+        android:orientation="horizontal">
+        <EditText
+            android:inputType="text"
+            android:layout_marginBottom="10dp"
+            android:focusableInTouchMode="true"
+            android:textSize="18sp"
+            android:hint="first name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/fnames"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lastname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/firstname"
+        android:orientation="horizontal">
+        <EditText
+            android:textSize="18sp"
+            android:inputType="text"
+            android:focusableInTouchMode="true"
+            android:hint="second name"
+            android:layout_marginBottom="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/lname"
+            android:layout_weight="1" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/classdirectory"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lastname"
+        android:orientation="horizontal">
+        <EditText
+            android:textSize="18sp"
+            android:inputType="text"
+            android:focusableInTouchMode="true"
+            android:hint="class"
+            android:layout_marginBottom="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/classname"
+            android:layout_weight="1" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/submit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/classdirectory"
+        android:orientation="horizontal">
+        <Button
+            android:text="Register"
+            android:textSize="20sp"
+            android:textColor="@color/colorBackground"
+            android:layout_width="match_parent"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/add"
+            android:layout_weight="1" />
+    </LinearLayout>
+        </RelativeLayout>
+
+    </ScrollView>
 
 
 </RelativeLayout>
